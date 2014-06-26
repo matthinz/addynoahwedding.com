@@ -104,9 +104,11 @@ hr {
 }
 
 #venue {
+  @include sectionize($color-venue);
 }
 
 #seattle {
+  @include sectionize($color-bham);
 }
 
 .shadowed-image {
