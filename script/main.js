@@ -1,14 +1,45 @@
 (function() {
 
+    var $window = $(window),
+        $nav = null,
+        $lastSection = null;
+
     $(function() {
 
         handleNav();
         handleRSVP();
+        ensureLastSectionTallEnough();
+
+        var timer;
+        $window.bind('resize', function() {
+            if (timer) {
+                window.clearTimeout(timer);
+            }
+            timer = window.setTimeout(function() {
+                timer = 0;
+                ensureLastSectionTallEnough();
+            }, 10);
+        });
 
     });
 
+    function ensureLastSectionTallEnough() {
+
+        if ($lastSection === null) {
+            $lastSection = $('.content > section:last-child');
+        }
+
+        if ($nav === null) {
+            $nav = $('header > nav');
+        }
+            
+        var lastSectionHeight = $window.height() - $nav.height();
+        $lastSection.css('min-height', ($window.height() - $nav.height()) + 'px');
+
+    }
+
     function handleNav() {
-        $(document).on('click', 'nav a', function(evt) {
+        $(document).on('click', 'a[href^=#]', function(evt) {
             evt.preventDefault();
             var m = /#(.+)/.exec(this.href);
             var $el = $('#' + m[1]);
@@ -52,10 +83,17 @@
     function scrollTo(el) {
         var $el = $(el),
             offset = $el.offset(),
-            padding = parseInt($(document.body).css('padding-top'), 10);
+            padding = parseInt($(document.body).css('padding-top'), 10),
+            y;
+
+        if ($el.is(':first-child')) {
+            y = 0;
+        } else {
+            y = offset.top - (padding / 2);
+        }
 
         $('html,body').animate({
-            scrollTop: offset.top - (padding / 2)
+            scrollTop: y
         }, 300);
     }
 

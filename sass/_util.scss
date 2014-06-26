@@ -1,11 +1,11 @@
 @mixin box-background($color, $border-side: top) {
-  background: lighten($color, 10%) image-url("paper.png");
+  background: lighten($color, 10%);
   border-#{$border-side}: 2px solid darken($color, 25%);
 }
 
 @mixin button-background($color: theme-color(7)) {
 
-  background: darken($color, 10%) image-url("paper.png");
+  background: darken($color, 10%);
   border: none;
   border-bottom: 2px solid darken($color, 25%);
   color: lighten($color, 35%);

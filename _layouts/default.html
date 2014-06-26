@@ -1,20 +1,21 @@
 ---
-venue_address: "1300 Broadway, Bellingham, WA"
-venue_address_escaped: "Broadway%20Hall%2C%201300%20Broadway%2C%20Bellingham%2C%20WA"
+venue_name: Golden Gardens Bathhouse
+venue_address: "8498 Seaview Place NW, Seattle, WA"
 venue_map_width: 640
 venue_map_height: 640
-venue_coords: "48.757713,-122.49122"
-venue_map_url: http://goo.gl/maps/6iClP
-venue_url: http://www.broadwayhall.com/
+venue_coords: "47.6917923,-122.4039701"
+venue_map_url: https://goo.gl/maps/gTu00
+venue_url: http://www.seattle.gov/parks/park_detail.asp?id=243
+venue_city: Seattle
+venue_state: WA
 
-honeyfund_url: http://www.honeyfund.com/wedding/kershinz
-
-rsvp_url: http://kershinz.wufoo.com/forms/z7x4m1
-rsvp_username: kershinz
-rsvp_form_id: z7x4m1
+rsvp_url: https://addyandnoah.wufoo.com/forms/z1ye8h7h08u2a0i
+rsvp_username: addyandnoah
+rsvp_form_id: z1ye8h7h08u2a0i
 rsvp_form_height: 408
 
-meta_description: "Kershner/Hinz wedding: Event of the season?"
+title: Addy Clapp and Noah Shay are getting married! September 6th, 2014
+meta_description: "Clapp/Shay wedding: be there!"
 
 ---
 <!DOCTYPE html>
@@ -25,11 +26,9 @@ meta_description: "Kershner/Hinz wedding: Event of the season?"
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Kate and Matt Get Married! October 12th, 2013</title>
+        <title>{{page.title}}</title>
         <meta name="viewport" content="width=device-width">
-        <meta name="description" content="page.meta_description">
-        <link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Raleway:400,200,100" rel="stylesheet" type="text/css">
+        <meta name="description" content="{{ page.meta_description }}">
         <link rel="stylesheet" href="/css/main.css">
         <script src="/script/vendor/modernizr-2.6.2.js"></script>
         <!--[if lt IE 9]>
@@ -43,7 +42,7 @@ meta_description: "Kershner/Hinz wedding: Event of the season?"
             <nav class="clearfix">
                 <a class="nav-home" href="#home">♡</a>
                 <a class="nav-venue" href="#venue">Venue</a>
-                <a class="nav-bham" href="#bham">Bellingham</a>
+                <a class="nav-bham" href="#seattle">Seattle</a>
                 <a class="nav-registry" href="#hkey-local-wedding">Registry</a>
             </nav>
 
@@ -56,8 +55,8 @@ meta_description: "Kershner/Hinz wedding: Event of the season?"
                     <div class="columns columns-two columns-small-right">
                         <div class="column first-child">
                             <h1>
-                                <small>Kate Kershner and Matt Hinz</small>
-                                are getting married
+                                <small>Addy Clapp and Noah Shay</small>
+                                wedding website
                             </h1>
 
                             <div class="columns columns-two">
@@ -65,8 +64,8 @@ meta_description: "Kershner/Hinz wedding: Event of the season?"
                                     <div class="box box-alt box-venue">
                                         <h3>Where<span class="q">?</span></h3>
                                         <p>
-                                            Broadway Hall
-                                            <big>Bellingham, WA</big>
+                                            Golden Gardens Bathhouse
+                                            <big>{{ page.venue_city }}, {{ page.venue_state }}</big>
                                         </p>
                                     </div>
                                 </div>
@@ -74,8 +73,8 @@ meta_description: "Kershner/Hinz wedding: Event of the season?"
                                     <div class="box box-date">
                                         <h3>When<span class="q">?</span></h3>
                                         <p>
-                                            <nobr>Saturday, October 12<sup>th</sup>, 2013</nobr><br>
-                                            <big>6:30 PM</big>
+                                            <nobr>Saturday, September 6<sup>th</sup>, 2014</nobr><br>
+                                            <big>4:00 PM</big>
                                         </p>
                                     </div>
                                 </div>
@@ -84,7 +83,7 @@ meta_description: "Kershner/Hinz wedding: Event of the season?"
                             <a id="rsvp-button" class="button button-block button-rsvp" href="{{ page.rsvp_url }}">RSVP</a>
                         </div>
                         <div class="column last-child">
-                            <div class="shadowed-image"><img src="/images/us.jpg"></div>
+                            <div class="shadowed-image no-mobile"><img src="/images/us.jpg"></div>
                         </div>
                     </div>
 
@@ -110,8 +109,8 @@ meta_description: "Kershner/Hinz wedding: Event of the season?"
                         <small>We appreciate your</small>
                         RSVP
                     </h2>
-                    <div id="wufoo-z7x4m1" class="rsvp-loading">
-                        Please RSVP using <a href="http://kershinz.wufoo.com/forms/z7x4m1">this online form</a>.
+                    <div id="wufoo-{{ page.rsvp_form_id }}" class="rsvp-loading">
+                        Please RSVP using <a href="{{ page.rsvp_url }}">this online form</a>.
                     </div>
                 </div>
             </section>
@@ -122,25 +121,21 @@ meta_description: "Kershner/Hinz wedding: Event of the season?"
                     <div class="columns columns-two">
                         <div class="column">
                             <h2>
-                                <small>This wedding is at</small>
-                                <a href="{{ page.venue_url }}">Broadway Hall</a>
+                                <small>The Venue</small>
+                                <a href="{{ page.venue_url }}">{{ page.venue_name }}</a>
                             </h2>
                             <p>
-                                Both our ceremony and reception will be at
-                                <a href="{{ page.venue_url }}" target="_blank">Broadway Hall</a>,
-                                within a few blocks of downtown Bellingham.
-                                The brief ceremony will start at 6:30, followed
-                                by dinner and dancing until eleven or midnight.
-                                Do get a drink (in the upstairs reception bar
-                                area) before the ceremony starts, and feel free
-                                to keep sipping during the ceremony. We would,
-                                if we didn&rsquo;t have to remember our vows.
+                               Our ceremony and reception will be at Golden Gardens Bathhouse and Meadow. The Ceremony will begin at 4:00 p.m. on Sept. 6th at the Golden Gardens Meadow (directly north of the Bathhouse). The reception, dinner, and dancing will follow in the Golden Gardens Bathhouse.
+                            </p>
+                            <p>
+                                <small>If the weather is nice parking at the venue may be an issue. Leave yourself a lot of time, or park and take the shuttle from downtown Seattle, or Ballard. See <a href="#transportation">transportation</a> for more info about the shuttle.
+                                </small>
                             </p>
                         </div>
                         <div class="column">
                             <a id="bh-map" class="shadowed-image" href="{{ page.venue_map_url }}">
                                 <figure>
-                                    <img src="//maps.googleapis.com/maps/api/staticmap?center={{ page.venue_address_escaped }}&size={{ page.venue_map_width }}x{{ page.venue_map_height}}&sensor=false&markers=color:green%7C{{ page.venue_coords }}" alt="Map of Broadway Hall" />
+                                    <img src="//maps.googleapis.com/maps/api/staticmap?center={{ page.venue_coords }}&size={{ page.venue_map_width }}x{{ page.venue_map_height}}&zoom=12&sensor=false&markers=color:green%7C{{ page.venue_coords }}" alt="Golden Gardens" />
                                     <figcaption>
                                         <address>{{ page.venue_address }}</address>
                                     </figcaption>
@@ -151,76 +146,99 @@ meta_description: "Kershner/Hinz wedding: Event of the season?"
                 </div>
             </section>
 
-            <section id="bham">
+            <section id="seattle">
                 <div class="container">
-                    <div class="columns columns-two">
-                        <div class="column">
-                            <h2>
-                                <small>This wedding is in Bellingham,</small>
-                                City of Subdued Excitement
-                            </h2>
-                            <p>
-                                Bellingham is a university town where entertainment is easy to find. We recommend using one of the city&rsquo;s many <a target="_blank" href="http://www.cob.org/services/recreation/parks-trails/trail-guide.aspx">bike and walking trails</a> to wander around <a target="_blank" href="http://www.portofbellingham.com/index.aspx?NID=473">Bellingham Bay</a> or <a target="_blank" href="http://www.cob.org/services/recreation/parks-trails/whatcom-falls-park.aspx">Whatcom Falls Park</a> while enjoying the start of autumn. Our <a target="_blank" href="http://www.bellinghamfarmers.org/2.aspx">Farmers Market</a> is a popular local hangout every Saturday, and a nice starting point for spending the day browsing <a target="_blank" href="https://downtownbham.wordpress.com/">downtown</a>. Fairhaven (about 2.5 miles from downtown, and an easy walk on the <a target="_blank" href="http://www.cob.org/documents/parks/parks-trails/trail-guide/south_bay.pdf">South Bay Trail</a>) also has a cute shopping district and a great local <a target="_blank" href="http://villagebooks.com/">bookstore</a>.
-                            </p>
-                            <p>
-                                We highly recommend a drink at several of our local breweries. Go to <a target="_blank" href="http://www.kulshanbrewery.com/">Kulshan</a> for a beer (and a rotating selection of food trucks). <a target="_blank" href="http://chuckanutbreweryandkitchen.com/">Chuckanut Brewery</a> and <a target="_blank" href="http://www.bbaybrewery.com/">Boundary Bay Brewery</a> are both popular, with broad brewpub menus. <a target="_blank" href="http://www.diamondjimsgrill.com/">Diamond Jim&rsquo;s</a> and the <a target="_blank" href="http://www.littlecheerful.com/">Little Cheerful</a> are good breakfast/lunch spots. And if you want to hang out with (and drink like) the college kids, go to the <a target="_blank" href="http://www.yelp.com/biz/up-and-up-tavern-bellingham">Up and Up Tavern</a> or the <a target="_blank" href="http://www.horseshoecafe.com/">Ranch Room</a>. &nbsp;
-                            </p>
+                    <h2>
+                        <small>Seattle, WA</small>
+                        The Windy City
+                    </h2>
 
-                            <h3>Where to Stay</h3>
+                    <h3>Where to Stay</h3>
 
+                    <dl class="hotels">
+                        <dt><a href="http://www.mediterranean-inn.com/">Mediterranean Inn</a></dt>
+                        <dd>
+                            <figure>
+                                <a href="http://www.mediterranean-inn.com/"><img src="/images/hotels/mediterranean.jpg"></a>
+                            </figure>
+                            
                             <p>
-                                We&rsquo;ve reserved blocks of rooms under "Kershner/Hinz" at two places:
-                            </p>
-
-                            <dl>
-                                {% for h in site.tags.hotel-reserved %}
-                                <dt><a href="{{ h.link }}" target="_blank">{{ h.title }}</a></dt>
-                                <dd>{{ h.content }}</dd>
-                                {% endfor %}
-                            </dl>
-
-                            <p>
-                                Alternately, if you&rsquo;re looking for something a little nicer &mdash; and <a href="https://maps.google.com/maps?saddr=Hotel+Bellwether,+1+Bellwether+Way,+Bellingham,+WA+98225&amp;daddr=1300+Broadway,+Bellingham,+WA&amp;hl=en&amp;sll=48.75609,-122.492127&amp;sspn=0.003756,0.010343&amp;geocode=FSDu5wIdA9my-Cn7WhCqqKOFVDG9LVP8cgoo4w%3BFeP75wIdQ--y-Ck7BFUyoaOFVDF3ZxnH-Kn2ZA&amp;oq=130&amp;dirflg=w&amp;mra=prev&amp;t=m&amp;z=17">really close to the venue</a> &mdash; the <a target="_blank" href="http://www.hotelbellwether.com/">Hotel Bellwether</a> is where it&rsquo;s at.
+                                Has a roof top deck and views of the Space Needle. Starbucks is next door. Rooms have a small kitchenette. They will honor the rates below if you mention Addy Clapp and/or Noah Shay’s wedding.
                             </p>
 
-                            <p>
-                                And remember, <a target="_blank" href="http://www.yellowcabinc.com/">Yellow Cab</a> is cheap! No excuse to drive if you shouldn&rsquo;t.
-                            </p>
+                            <div class="columns columns-two">
+                                <div class="column first-child">
+                                    <h4>Nightly Room Rate:</h4>
+                                    <ul class="rates">
+                                      <li>Double: $150</li>
+                                      <li>Queen: $160</li>
+                                      <li>King: $170</li>
+                                    </ul>
+                                </div>
+                                <div class="column last-child">
+                                    <h4>Other Charges:</h4>
 
-                        </div>
-                        <div class="column">
-                            <div class="shadowed-image"><img src="/images/bham02.jpg"></div>
-                            <div class="shadowed-image"><img src="/images/bham01.jpg"></div>
-                        </div>
-                    </div>
+                                    <ul class="rates">
+                                      <li>Parking: $18/day</li>
+                                      <li>Wi-Fi: $5/day</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <p>Call for reservations: <span class="tel">(206) 428-4700</span></p>
+                        </dd>
+                        </dd>
+                        <dt><a href="http://www.hotelballardseattle.com/">Hotel Ballard</a></dt>
+                        <dd>
+                            A more pricey option, this luxury hotel is in downtown Ballard. We do not have any rooms reserved, but they often run special discounts, such as like their page on Facebook and get 15% off, so check <a href="http://www.hotelballardseattle.com/">their website</a> for deals. 
+                        </dd>
+
+                        <dt><a href="http://www.vrbo.com/vacation-rentals/usa/washington/puget-sound/seattle/ballard?from-date=2014-09-05&to-date=2014-09-07">VRBO</a></dt>
+                        <dd>
+                            If you would like to rent a house, check out Vacation Rentals By Owners. There are many houses for rent in Ballard, the closest neighborhood to the wedding venue and reception.
+                        </dd>
+                    </dl>
+
+                    <h3 id="transportation">Transportation</h3>
+
+                    <p>
+                        We will have a shuttle to the wedding from the Mediterranean Inn and from Ballard. More details coming soon.
+                    </p>
 
                 </div>
             </section>
 
             <section id="hkey-local-wedding">
                 <div class="container">
-                    <div class="columns columns-two">
-                        <div class="column">
-                            <h2>
-                                <small>This wedding does not require gifts,</small>
-                                unless you want to
-                            </h2>
-                            <p>
-                                Don&rsquo;t want to give us a gift? Don&rsquo;t! We&rsquo;ve
-                                already got a KitchenAid and plenty of plates.
-                                But if you&rsquo;re sure you&rsquo;d like to help us out,
-                                we do have a <a href="{{ page.honeyfund_url }}">Honeymoon Fund</a>
-                                for a trip we&rsquo;re planning in the spring. Please
-                                keep in mind your presence or well-wishes are the
-                                only gift we require.
-
-                        </div>
-                        <div class="column">
-                            <a id="honeyfund" target="_blank" href="{{ page.honeyfund_url }}"><img src="/images/honeyfund.png" alt="Visit our Honeyfund"></a>
-                        </div>
-                    </div>
-
-                </div>
+                    <h2>
+                        <small>Gifts Welcome</small>
+                        Registry
+                    </h2>
+                    <p>
+                        We are registered at these fine establishments:
+                    </p>
+                    <ul class="registry-places">
+                        <li>
+                            <a class="reg-macys" href="http://www1.macys.com/registry/wedding/guest/?registryId=2186726">
+                                <img src="/images/registry/macys.png" alt="Macy's">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="reg-cb" href="http://www.crateandbarrel.com/Gift-Registry/Addy-Clapp-and-Noah-Shay/r5165879">
+                                <img src="/images/registry/crateandbarrel.png" alt="Crate &amp; Barrel">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="reg-surlatable" href="http://www.surlatable.com/registry/giftRegistryList.jsp?id=200960689742">
+                                <img src="/images/registry/surlatable.png" alt="Sur La Table">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="reg-honeyfund" href="http://www.honeyfund.com/wedding/addyandnoah">
+                                <img src="/images/registry/honeyfund.png" alt="HoneyFund">
+                            </a>
+                        </li>
+                    </ul>
             </section>
 
         </div>

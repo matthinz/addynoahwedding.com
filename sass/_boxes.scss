@@ -1,15 +1,16 @@
 // _boxes.scss
 
 $box-hpadding: $gutter-width;
-$box-vpadding: $gutter-width * 2;
+$box-vpadding: $gutter-width;
 
-$box-hpadding-desktop: $gutter-width * 2;
-$box-vpadding-desktop: $gutter-width * 4;
+$box-hpadding-desktop: $gutter-width * 1;
+$box-vpadding-desktop: $gutter-width * 2;
 
 
 .box {
   @include box-background(theme-color(6));
 
+  display: block;
   font-family: $fancy-font-family;
   font-size: 90%;
   margin: 0;
@@ -29,6 +30,11 @@ $box-vpadding-desktop: $gutter-width * 4;
   &.box-venue {
     @include box-background($color-venue);
   }
+}
+
+a.box, a.box:visited, a.box:active, a.box:link {
+  text-decoration: none;
+  color: $color-text;
 }
 
 @include breakpoint-tablet {

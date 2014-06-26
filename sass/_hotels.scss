@@ -1,0 +1,8 @@
+.hotels {
+	dd { @include clearfix; }
+	figure { 
+		float: right;
+		margin: 0 0 1em 1em;
+		a { display: block; }
+	}
+}

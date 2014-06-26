@@ -3,12 +3,12 @@
 $width-tablet: 700px;
 $width-desktop: 960px;
 
-$gutter-width: 5%;
+$gutter-width: 2%;
 $vmargin: 25px;
 $vmargin-huge: $vmargin * 3;
 
 // fonts
-$base-font-family: 'PT Serif', serif;
+$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $base-font-size-desktop: 18px;
 $base-font-size-tablet: 16px;
@@ -16,7 +16,7 @@ $base-font-size-mobile: 14px;
 $base-font-weight: 400;
 $base-line-height: 1.42;
 
-$fancy-font-family: 'Raleway', sans-serif;
+$fancy-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $weight-light: 200;
 $weight-normal: 400;
@@ -34,18 +34,18 @@ $secondary-color: #5797a5;
 $color-black: #333;
 
 $color-teal: #86cbc5;
-$color-blue: #83bec8;
+$color-blue: #6486dd; //#83bec8;
 $color-orange: #c9a687;
 $color-yellow: #d3d298;
-$color-green: #98c995;
+$color-green: #56cb96; //#98c995;
 $color-purple: #cbcbcb;
 $color-pink: #e0bac0;
 
 $theme-colors: $color-pink, $color-orange, $color-yellow, $color-blue, $color-purple,  $color-teal, $color-green;
 $color-home: $color-pink;
-$color-venue: $color-orange;
-$color-bham: $color-blue;
-$color-registry: $color-yellow;
+$color-venue: $color-yellow;
+$color-bham: $color-green;
+$color-registry: $color-blue;
 $color-rsvp: $color-green;
 
 @function theme-color($index) {

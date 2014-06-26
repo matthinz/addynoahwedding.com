@@ -4,7 +4,6 @@
 html {
 
   background-color: #fff;
-  background-image: image-url("paper.png");
 
   height: 100%;
 
@@ -13,9 +12,9 @@ html {
 body {
 
   min-height: 100%;
+  padding: 4em 0 0 0;
 
   @include breakpoint-tablet {
-    padding: 100px 0 0 0;
   }
 }
 
@@ -43,7 +42,6 @@ figure {
 figcaption {
 
     background: #fff;
-    @include paper-background(#fff);
 
     color: #000;
     padding: 1em 0;
@@ -95,7 +93,8 @@ hr {
   $dark-color: darken($color, $dark-factor);
   $very-dark-color: darken($color, $dark-factor * 1.5);
 
-  @include paper-background($light-color);
+  background: $light-color;
+
   a {
     color: $dark-color;
     &:hover {
@@ -105,32 +104,18 @@ hr {
 }
 
 #venue {
-  @include sectionize($color-venue, 32.5%);
 }
 
-#bham {
-  @include sectionize($color-bham, 22.5%, 30%);
-}
-
-#hkey-local-wedding {
-  @include sectionize($color-registry, 25%);
-
-  @include breakpoint-tablet {
-    padding-top: 25%;
-    padding-bottom: 25%;
-  }
+#seattle {
 }
 
 .shadowed-image {
 
   html.boxshadow & {
     @include box-sizing(border-box);
-    @include box-shadow(0 0 10px #888);
-    border: 15px solid #fff;
-    margin: 2.5% 10%;
-    margin-bottom: 10%;
   }
 
+  border: 5px solid #fff;
   color: $color-text;
   display: block;
   margin-bottom: 10%;
@@ -139,6 +124,8 @@ hr {
   @include breakpoint-tablet {
 
     html.boxshadow & {
+      @include box-shadow(0 0 10px #888);
+      border: 15px solid #fff;
       margin: 2.5%;
       margin-bottom: 10%;
     }
@@ -155,8 +142,9 @@ hr {
   }
 }
 
+
 #rsvp {
-  @include paper-background(lighten($color-rsvp, 20%));
+  background: lighten($color-rsvp, 20%);
   display: none;
 }
 
@@ -179,13 +167,4 @@ hr {
   .wufoo-loaded & {
     background-image: none;
   }
-}
-
-#honeyfund {
-  background: #fff;
-  border-bottom: 2px solid #2085bb;
-  display: block;
-  margin: 2em auto;
-  padding: 0 20px;
-  width: image-width("honeyfund.png");
 }
