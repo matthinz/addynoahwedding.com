@@ -27,6 +27,10 @@ $box-vpadding-desktop: $gutter-width * 2;
     display: block;
   }
 
+  p {
+    letter-spacing: -1px;
+  }
+
   &.box-venue {
     @include box-background($color-venue);
   }

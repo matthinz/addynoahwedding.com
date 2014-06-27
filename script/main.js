@@ -8,7 +8,6 @@
 
         handleNav();
         handleRSVP();
-        ensureLastSectionTallEnough();
 
         var timer;
         $window.bind('resize', function() {
@@ -90,6 +89,11 @@
             y = 0;
         } else {
             y = offset.top - (padding / 2);
+        }
+
+        //HACK
+        if (!$el.is('section')) {
+            y -= $('header > nav').outerHeight();
         }
 
         $('html,body').animate({
