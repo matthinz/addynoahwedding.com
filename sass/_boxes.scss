@@ -36,6 +36,11 @@ $box-vpadding-desktop: $gutter-width * 2;
   }
 }
 
+.box-venue a {
+  color: $color-text;
+  text-decoration: none;
+}
+
 a.box, a.box:visited, a.box:active, a.box:link {
   text-decoration: none;
   color: $color-text;
