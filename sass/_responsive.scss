@@ -10,3 +10,15 @@
     @content;
   }
 }
+
+@media screen and (max-width: $width-tablet - 1px) {
+	.no-mobile {
+		display: none !important;
+	}
+}
+
+@include breakpoint-tablet {
+	.mobile-only {
+		display: none !important;
+	}
+}
